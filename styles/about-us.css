@@ -13,6 +13,7 @@ body {
    font-style: normal;
 }
 
+/* Stat Header Styling */
 .container__nav {
    display: flex;
    justify-content: space-between;
@@ -55,7 +56,9 @@ body {
    color: #f28f19;
    text-decoration: underline;
 }
+/* End Header Styling */
 
+/* Start Footer Styling */
 .container__footer {
    display: flex;
    justify-content: space-around;
