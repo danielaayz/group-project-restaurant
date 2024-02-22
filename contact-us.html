@@ -7,7 +7,7 @@
       <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-      <link rel="stylesheet" href="styles/index.css" />
+      <link rel="stylesheet" href="styles/contact-us.css" />
       <script
          src="https://kit.fontawesome.com/a14db3a8ab.js"
          crossorigin="anonymous"></script>
@@ -56,6 +56,43 @@
                <p><i class="fa-solid fa-envelope"></i> contact@theoldman.com</p>
                <p><i class="fa-solid fa-phone"></i> 08 - 30 72 60</p>
             </section>
+            <div class="container section-right">
+               <form class="container-form" action="">
+                  <label class="label" for="name">Your name</label>
+                  <input
+                     id="name"
+                     class="input-field"
+                     name="name"
+                     type="text"
+                     required />
+                  <label class="label" for="e-mail">Your e-mail</label>
+                  <input
+                     id="email"
+                     class="input-field"
+                     type="email"
+                     name="email"
+                     required />
+                  <label class="label" for="phone">Your phone</label>
+                  <input
+                     id="phone"
+                     class="input-field"
+                     name="phone"
+                     type="tel"
+                     required />
+                  <label class="label" for="message">Your message</label>
+                  <br />
+                  <textarea
+                     class="label"
+                     name=""
+                     id="message"
+                     cols="50"
+                     rows="5"
+                     placeholder="Please enter your message here"></textarea>
+                  <button class="btn btn-submit" type="submit">
+                     Send message
+                  </button>
+               </form>
+            </div>
          </main>
          <!-- Start Footer -->
          <footer class="container__footer">
@@ -109,7 +146,9 @@
                      class="input-field"
                      type="text"
                      placeholder="Enter your e-mail" />
-                  <button class="btn__footer" type="submit">Subscribe</button>
+                  <button class="btn btn-footer" type="submit">
+                     Subscribe
+                  </button>
                </div>
             </section>
          </footer>
