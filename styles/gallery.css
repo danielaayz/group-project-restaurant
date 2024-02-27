@@ -7,6 +7,7 @@
 }
 
 body {
+   
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-size: 1rem;
@@ -25,6 +26,87 @@ body {
    width: 100%;
    max-width: 328px;
 }
+
+section {
+   max-width: 1536px;
+   margin: 0 auto;
+}
+
+ .contaniner {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+
+ .box {
+   max-width: 50%;
+   min-height: auto;
+   margin: 20px auto;
+   align-items: center;
+   background-color: #3783ca;
+   border-color: #3682c9;
+ }
+
+ .box .description {
+   background-color: #3783ca;
+   color: #ffffff;
+   padding: 10px;
+   text-align: center;
+   font-weight: 500;
+   font-size: 2vw;
+ }
+ 
+ 
+ .main-title {
+   color: #3783ca;
+   text-align: center;
+   font-size: 5vw;
+   font-weight: bold;
+   margin-bottom: 30px;
+ }
+ 
+ .main-info {
+   text-align: center;
+   color: #3783ca;
+   margin-bottom: 30px;
+   font-size: 3vw;
+ }
+ 
+ .main-btn {
+  
+   width: 152px;
+   height: 64px;
+   background-color: #3783ca;
+   border-radius: 6px;
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 32px;
+   text-align: center;
+   letter-spacing: 0.02em;
+   color: #ffffff;
+   border: none;
+margin-left: 45%;
+margin-right: 45%;
+   margin-top: 30px;
+   margin-bottom: 30px;
+      
+ }
+ 
+
+ .main-img {
+   max-width: 400px;
+   width: 100%;
+   margin-top: 30px;
+
+   text-align: center;
+   margin: 0 auto;
+   border: 2px solid #3783ca;
+   margin: auto;
+   
+ }
+   
 
 .menu {
    list-style: none;
@@ -139,7 +221,7 @@ p {
    flex: 1 0 0;
    align-self: stretch;
    font-size: 14px;
-   color: #fff;
+   color: #ffffff;
    margin-left: 24px;
    transition-duration: 0.4s;
 }
