@@ -4,8 +4,7 @@
  * 17 |     color: $main-txt-color;
  *    |            ^^^^^^^^^^^^^^^
  *    '
- *   main.scss 17:9   @import
- *   index.scss 17:9  root stylesheet */
+ *   main.scss 17:9  root stylesheet */
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
   white-space: pre;
@@ -13,9 +12,9 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    ╷\a 17 │     color: $main-txt-color;\a    │            ^^^^^^^^^^^^^^^\a    ╵\a   main.scss 17:9   @import\a   index.scss 17:9  root stylesheet";
+  content: "Error: Undefined variable.\a    ╷\a 17 │     color: $main-txt-color;\a    │            ^^^^^^^^^^^^^^^\a    ╵\a   main.scss 17:9  root stylesheet";
 }
 
 
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=main.css.map */
