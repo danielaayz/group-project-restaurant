@@ -1,44 +1,85 @@
+@use "footer";
+@use "fonts";
+
+$input-field-color: rgba(208, 225, 252, 0.2);
+$input-field-hover: rgba(0, 83, 140, 12%);
+$outline-color: #3682c9;
+
+.contact-card {
+   width: 100%;
+   margin: 100px 0;
+   display: flex;
+   justify-content: space-around;
+}
+
+.contact-heading {
+   font-family: fonts.$heading-font;
+   width: 100%;
+   border-bottom: 1px solid #3682c9;
+   text-align: center;
+   padding-bottom: 20px;
+}
+
 .container {
    width: 100%;
+   &__section-left {
+      color: #fff;
+      max-width: 398px;
+      display: flex;
+      flex-direction: column;
+   }
+   &__section-right {
+      max-width: 742px;
+   }
 }
 
-.section-left {
-   max-width: 398px;
-   display: flex;
-   flex-direction: column;
-}
-
-.section-right {
-   max-width: 742px;
-}
-
-.container-form {
-   /* background-color: #4a4639; */
+.form {
    background-color: #fff;
-   color: #fff8ed;
+   color: #111111;
    border-radius: 25px;
    padding: 65px 40px 79px 40px;
-   max-width: 616px;
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-}
-.textarea {
-   resize: none;
-   border: none;
-   border-radius: 25px;
-   background: #cdc6b5;
-   padding: 24px 24px;
-   margin: 15px 0px;
-}
+   //    max-width: 616px;
+   //    width: 100%;
+   //    display: flex;
+   //    flex-direction: column;
+   &__heading {
+      font-family: fonts.$heading-font;
+      font-size: 28px;
+      margin-bottom: 37px;
+   }
 
-.textarea:hover {
-   background: rgba(0, 83, 140, 12%);
-}
-
-.textarea:focus {
-   background: rgba(0, 83, 140, 12%);
-   outline: 2px solid #3682c9;
+   &__input-field {
+      width: auto;
+      max-width: 310px;
+      border: none;
+      padding-left: 16px;
+      min-height: 40px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      background: $input-field-color;
+      &:hover {
+         background: $input-field-hover;
+      }
+      &:focus {
+         background: $input-field-hover;
+         outline: 2px solid $outline-color;
+      }
+   }
+   &__textarea {
+      resize: none;
+      border: none;
+      border-radius: 25px;
+      background: $input-field-color;
+      padding: 24px 24px;
+      margin: 15px 0px;
+      &:hover {
+         background: $input-field-hover;
+      }
+      &:focus {
+         background: $input-field-hover;
+         outline: 2px solid $outline-color;
+      }
+   }
 }
 
 #btn-submit {
