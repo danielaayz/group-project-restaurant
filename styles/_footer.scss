@@ -69,7 +69,7 @@ p {
    outline: 2px solid #3682c9;
 }
 
-.btn__footer {
+%button {
    background-color: #3682c9;
    border: none;
    border-radius: 100px;
@@ -83,13 +83,27 @@ p {
    font-size: 14px;
    color: #fff;
    margin-left: 24px;
-   transition-duration: 0.4s;
 }
 
-.btn__footer:hover {
-   background-color: #f28f19;
+.btn {
+   @extend %button;
+   &:hover {
+      background-color: #f28f19;
+      transition-duration: 0.4s;
+   }
 }
 
-.btn__footer:active {
-   background-color: #d77b32;
+.btn {
+   @extend %button;
+   &:active {
+      background-color: #d77b32;
+   }
 }
+
+// .btn__footer:hover {
+//    background-color: #f28f19;
+// }
+
+// .btn__footer:active {
+//    background-color: #d77b32;
+// }
