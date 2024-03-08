@@ -85,3 +85,17 @@ $outline-color: #3682c9;
 #btn-submit {
    padding: 10px 24px;
 }
+
+@media screen and (max-width: 768px) {
+   .contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+   }
+   .form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+   }
+}

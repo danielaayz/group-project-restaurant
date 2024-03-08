@@ -110,6 +110,16 @@ p {
    }
 }
 
+@media screen and (max-width: 768px) {
+   .container__footer {
+      margin: 42px 30px;
+   }
+   .container__input {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
 // .btn__footer:hover {
 //    background-color: #f28f19;
 // }
