@@ -66,11 +66,12 @@ $outline-color: #3682c9;
       }
    }
    &__textarea {
+      width: 90%;
       resize: none;
       border: none;
       border-radius: 25px;
       background: $input-field-color;
-      padding: 24px 24px;
+      padding: 24px 16px;
       margin: 15px 0px;
       &:hover {
          background: $input-field-hover;
@@ -97,5 +98,26 @@ $outline-color: #3682c9;
       display: flex;
       flex-direction: column;
       margin-top: 50px;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .contact-card {
+      width: 90%;
+      display: flex;
+   }
+
+   .form {
+      max-width: 300px;
+      &__label {
+         margin-bottom: 16px;
+      }
+      &__textarea {
+         margin: 0;
+      }
+   }
+
+   .btn {
+      margin: 30px 0;
    }
 }

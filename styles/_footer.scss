@@ -1,4 +1,5 @@
 @use "header";
+@use "fonts";
 
 .container__footer {
    display: flex;
@@ -22,6 +23,10 @@
 
 .container__footer-card img {
    margin-bottom: 30px;
+}
+
+.footer__heading {
+   font-family: fonts.$heading-font;
 }
 
 .container__footer-card h3,
@@ -84,7 +89,7 @@ p {
    border: none;
    border-radius: 100px;
    display: flex;
-   padding: 10px 24px;
+   padding: 14px 24px;
    justify-content: center;
    align-items: center;
    gap: 8px;
@@ -92,7 +97,7 @@ p {
    align-self: stretch;
    font-size: 14px;
    color: #fff;
-   margin-left: 24px;
+   // margin-left: 24px;
 }
 
 .btn {
@@ -110,6 +115,10 @@ p {
    }
 }
 
+.btn-footer {
+   margin-left: 24px;
+}
+
 @media screen and (max-width: 768px) {
    .container__footer {
       margin: 42px 30px;
@@ -117,6 +126,29 @@ p {
    .container__input {
       display: flex;
       flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .wave-trans {
+      height: 2rem;
+   }
+
+   .container__footer {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .btn-footer {
+      margin: 20px 0;
+   }
+
+   .card-1__icons {
+      margin-top: 20px;
+   }
+
+   .container__footer-card.newsletter {
+      margin-top: 20px;
    }
 }
 
