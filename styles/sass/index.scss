@@ -1,0 +1,14 @@
+body {
+	width: 100%;
+	height: 100%;
+	background: #1E232B;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@import 'header';
+@import 'footer';
+@import 'main';
