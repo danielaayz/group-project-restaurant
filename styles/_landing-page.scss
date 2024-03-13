@@ -2,10 +2,13 @@
 
 /*classes*/
 
+@import "contact-form";
+
 main {
    background: #1e232b;
    border: none;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
 }
