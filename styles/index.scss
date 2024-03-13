@@ -1,0 +1,36 @@
+// body {
+//    width: 100%;
+//    height: 100%;
+//    // background: #1E232B;
+//    border: none;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    // flex-wrap: wrap;
+// }
+
+@use "fonts";
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: #fff;
+   font-family: fonts.$main-font;
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: normal;
+}
+
+.wrapper {
+   margin: 0 auto;
+   flex-wrap: wrap;
+}
+
+@import "header";
+@import "footer";
+@import "landing-page";
+@import "main";
