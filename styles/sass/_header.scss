@@ -50,6 +50,13 @@
    background-size: auto 50%;
 }
 
+.wave-trans {
+   width: 100%;
+   height: 4.9rem;
+   display: block;
+   transform: rotate(180deg);
+}
+
 @media screen and (max-width: 320px) {
    .container__nav {
       display: flex;
