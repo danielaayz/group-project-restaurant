@@ -7,11 +7,32 @@
 }
 
 body {
-   
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-size: 1rem;
    font-style: normal;
+}
+
+.wave {
+   width: 100%;
+   height: 4.19rem;
+   display: block;
+   background-color: #20272d;
+   background-image: url(../images/wave.png);
+   background-position: top left;
+   background-repeat: repeat-x;
+   background-size: auto 50%;
+}
+
+.wave-trans {
+   width: 100%;
+   height: 4.9rem;
+   display: block;
+   transform: rotate(180deg);
+}
+
+main {
+   background-color: #20272d;
 }
 
 .container__nav {
@@ -32,50 +53,48 @@ section {
    margin: 0 auto;
 }
 
- .contaniner {
+.contaniner {
    display: flex;
    align-items: center;
    flex-direction: row;
    flex-wrap: wrap;
    justify-content: center;
- }
+}
 
- .box {
+.box {
    max-width: 50%;
    min-height: auto;
    margin: 20px auto;
    align-items: center;
    background-color: #3783ca;
    border-color: #3682c9;
- }
+}
 
- .box .description {
+.box .description {
    background-color: #3783ca;
    color: #ffffff;
    padding: 10px;
    text-align: center;
    font-weight: 500;
    font-size: 2vw;
- }
- 
- 
- .main-title {
+}
+
+.main-title {
    color: #3783ca;
    text-align: center;
    font-size: 5vw;
    font-weight: bold;
    margin-bottom: 30px;
- }
- 
- .main-info {
+}
+
+.main-info {
    text-align: center;
    color: #3783ca;
    margin-bottom: 30px;
    font-size: 3vw;
- }
- 
- .main-btn {
-  
+}
+
+.main-btn {
    width: 152px;
    height: 64px;
    background-color: #3783ca;
@@ -87,15 +106,13 @@ section {
    letter-spacing: 0.02em;
    color: #ffffff;
    border: none;
-margin-left: 45%;
-margin-right: 45%;
+   margin-left: 45%;
+   margin-right: 45%;
    margin-top: 30px;
    margin-bottom: 30px;
-      
- }
- 
+}
 
- .main-img {
+.main-img {
    max-width: 400px;
    width: 100%;
    margin-top: 30px;
@@ -104,9 +121,7 @@ margin-right: 45%;
    margin: 0 auto;
    border: 2px solid #3783ca;
    margin: auto;
-   
- }
-   
+}
 
 .menu {
    list-style: none;
@@ -137,10 +152,22 @@ margin-right: 45%;
    color: #f28f19;
    text-decoration: underline;
 }
+/* 
+footer starts here */
+@use "header";
+@use "fonts";
 
 .container__footer {
    display: flex;
    justify-content: space-around;
+   margin-top: 42px;
+}
+
+.wave-trans {
+   width: 100%;
+   height: 4.9rem;
+   display: block;
+   transform: rotate(180deg);
 }
 
 .container__footer-card {
@@ -152,6 +179,10 @@ margin-right: 45%;
 
 .container__footer-card img {
    margin-bottom: 30px;
+}
+
+.footer__heading {
+   font-family: fonts.$heading-font;
 }
 
 .container__footer-card h3,
@@ -209,27 +240,70 @@ p {
    outline: 2px solid #3682c9;
 }
 
-.btn__footer {
+%button {
    background-color: #3682c9;
    border: none;
    border-radius: 100px;
    display: flex;
-   padding: 10px 24px;
+   padding: 14px 24px;
    justify-content: center;
    align-items: center;
    gap: 8px;
    flex: 1 0 0;
    align-self: stretch;
    font-size: 14px;
-   color: #ffffff;
+   color: #fff;
+   // margin-left: 24px;
+}
+
+.btn {
+   @extend %button;
+   &:hover {
+      background-color: #f28f19;
+      transition-duration: 0.4s;
+   }
+}
+
+.btn {
+   @extend %button;
+   &:active {
+      background-color: #d77b32;
+   }
+}
+
+.btn-footer {
    margin-left: 24px;
-   transition-duration: 0.4s;
 }
 
-.btn__footer:hover {
-   background-color: #f28f19;
+@media screen and (max-width: 768px) {
+   .container__footer {
+      margin: 42px 30px;
+   }
+   .container__input {
+      display: flex;
+      flex-direction: column;
+   }
 }
 
-.btn__footer:active {
-   background-color: #d77b32;
+@media screen and (max-width: 320px) {
+   .wave-trans {
+      height: 2rem;
+   }
+
+   .container__footer {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .btn-footer {
+      margin: 20px 0;
+   }
+
+   .card-1__icons {
+      margin-top: 20px;
+   }
+
+   .container__footer-card.newsletter {
+      margin-top: 20px;
+   }
 }
