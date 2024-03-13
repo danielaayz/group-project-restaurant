@@ -1,6 +1,17 @@
+@use "header";
+@use "fonts";
+
 .container__footer {
    display: flex;
    justify-content: space-around;
+   margin-top: 42px;
+}
+
+.wave-trans {
+   width: 100%;
+   height: 4.9rem;
+   display: block;
+   transform: rotate(180deg);
 }
 
 .container__footer-card {
@@ -12,6 +23,10 @@
 
 .container__footer-card img {
    margin-bottom: 30px;
+}
+
+.footer__heading {
+   font-family: fonts.$heading-font;
 }
 
 .container__footer-card h3,
@@ -42,7 +57,7 @@ p {
    margin-bottom: 7px;
 }
 
-/*.card-3__newsletter {
+.card-3__newsletter {
    display: flex;
    flex-direction: column;
 }
@@ -69,12 +84,12 @@ p {
    outline: 2px solid #3682c9;
 }
 
-.btn__footer {
+%button {
    background-color: #3682c9;
    border: none;
    border-radius: 100px;
    display: flex;
-   padding: 10px 24px;
+   padding: 14px 24px;
    justify-content: center;
    align-items: center;
    gap: 8px;
@@ -82,14 +97,57 @@ p {
    align-self: stretch;
    font-size: 14px;
    color: #fff;
+   // margin-left: 24px;
+}
+
+.btn {
+   @extend %button;
+   &:hover {
+      background-color: #f28f19;
+      transition-duration: 0.4s;
+   }
+}
+
+.btn {
+   @extend %button;
+   &:active {
+      background-color: #d77b32;
+   }
+}
+
+.btn-footer {
    margin-left: 24px;
-   transition-duration: 0.4s;
 }
 
-.btn__footer:hover {
-   background-color: #f28f19;
+@media screen and (max-width: 768px) {
+   .container__footer {
+      margin: 42px 30px;
+   }
+   .container__input {
+      display: flex;
+      flex-direction: column;
+   }
 }
 
-.btn__footer:active {
-   background-color: #d77b32;
-}*/
+@media screen and (max-width: 320px) {
+   .wave-trans {
+      height: 2rem;
+   }
+
+   .container__footer {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .btn-footer {
+      margin: 20px 0;
+   }
+
+   .card-1__icons {
+      margin-top: 20px;
+   }
+
+   .container__footer-card.newsletter {
+      margin-top: 20px;
+   }
+}
