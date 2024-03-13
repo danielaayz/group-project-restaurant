@@ -13,6 +13,11 @@ body {
    font-style: normal;
 }
 
+.wrapper {
+   margin: 0 auto;
+   flex-wrap: wrap;
+}
+
 .wave {
    width: 100%;
    height: 4.19rem;
@@ -100,7 +105,6 @@ section {
    background-color: #3783ca;
    border-radius: 6px;
    font-weight: bold;
-   font-size: 16px;
    line-height: 32px;
    text-align: center;
    letter-spacing: 0.02em;
@@ -109,7 +113,6 @@ section {
    margin-left: 45%;
    margin-right: 45%;
    margin-top: 30px;
-   margin-bottom: 30px;
 }
 
 .main-img {
@@ -154,8 +157,6 @@ section {
 }
 /* 
 footer starts here */
-@use "header";
-@use "fonts";
 
 .container__footer {
    display: flex;
@@ -240,7 +241,7 @@ p {
    outline: 2px solid #3682c9;
 }
 
-%button {
+.btn {
    background-color: #3682c9;
    border: none;
    border-radius: 100px;
@@ -253,22 +254,15 @@ p {
    align-self: stretch;
    font-size: 14px;
    color: #fff;
-   // margin-left: 24px;
 }
 
-.btn {
-   @extend %button;
-   &:hover {
-      background-color: #f28f19;
-      transition-duration: 0.4s;
-   }
+.btn:hover {
+   background-color: #f28f19;
+   transition-duration: 0.4s;
 }
 
-.btn {
-   @extend %button;
-   &:active {
-      background-color: #d77b32;
-   }
+.btn:active {
+   background-color: #d77b32;
 }
 
 .btn-footer {

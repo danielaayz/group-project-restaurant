@@ -56,26 +56,38 @@ body {
    color: #f28f19;
    text-decoration: underline;
 }
+
+.wave {
+   width: 100%;
+   height: 4.19rem;
+   display: block;
+   background-color: #20272d;
+   background-image: url(../images/wave.png);
+   background-position: top left;
+   background-repeat: repeat-x;
+   background-size: auto 50%;
+}
+
 /* End Header Styling */
 
 /* Start main Styling */
-.card_seafood{
+.card_seafood {
    margin: 0px;
    width: 100%;
    height: 660px;
    display: flex;
    flex-direction: row;
    justify-content: center;
-   background-color: #20272D;
+   background-color: #20272d;
 }
-.seafood{
+.seafood {
    margin: 0px;
    margin-left: 20px;
    margin-right: 20px;
    width: 100%;
    height: 100vh;
 }
-.card_heading{
+.card_heading {
    height: 100px;
    display: flex;
    flex-direction: row;
@@ -87,19 +99,19 @@ body {
    font-style: normal;
    margin-top: 0px;
    color: white;
-   background-color: #20272D;
+   background-color: #20272d;
 }
-.main__heading{
+.main__heading {
    margin-top: 50px;
    padding: 10px 10px;
 }
-.card_aboutus{
+.card_aboutus {
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
-   background-color: #20272D;
+   background-color: #20272d;
 }
-.main_info{
+.main_info {
    width: 100%;
    height: 50%;
    margin-right: 10px;
@@ -108,7 +120,7 @@ body {
    padding: 10px 10px;
    position: relative;
 }
-.main__text{
+.main__text {
    width: 100%;
    height: 100%;
    font-size: 20px;
@@ -120,7 +132,7 @@ body {
    margin-right: 10px;
    margin-left: 10px;
 }
-.card_info{
+.card_info {
    height: 50%;
    width: 50%;
    display: flex;
@@ -137,7 +149,7 @@ body {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   align-content: center; 
+   align-content: center;
 }
 .box_info {
    width: 50%;
@@ -147,10 +159,10 @@ body {
    margin-left: 5px;
    margin-right: 5px;
    border: 1px solid blue;
-   background-color:#f5f5e3;
+   background-color: #f5f5e3;
    border-radius: 15px;
 }
-.box_info{
+.box_info {
    width: 50%;
    height: 100%;
    font-size: 20px;
@@ -163,7 +175,7 @@ body {
    margin-left: 5px;
    margin-right: 5px;
 }
-h3{
+h3 {
    margin-top: 25px;
    line-height: 25pt;
    color: cornflowerblue;
@@ -178,13 +190,13 @@ h3{
    justify-content: space-between;
    align-content: center;
 }
-.about_chef{
+.about_chef {
    margin: 5px;
    width: 300px;
    height: 600px;
    padding: 5px 5px;
 }
-.chef{
+.chef {
    height: 100%;
    width: 100%;
    padding: 5px 5px;
@@ -192,9 +204,18 @@ h3{
 }
 
 /* Start Footer Styling */
+
 .container__footer {
    display: flex;
    justify-content: space-around;
+   margin-top: 42px;
+}
+
+.wave-trans {
+   width: 100%;
+   height: 4.9rem;
+   display: block;
+   transform: rotate(180deg);
 }
 
 .container__footer-card {
@@ -206,6 +227,10 @@ h3{
 
 .container__footer-card img {
    margin-bottom: 30px;
+}
+
+.footer__heading {
+   font-family: fonts.$heading-font;
 }
 
 .container__footer-card h3,
@@ -263,12 +288,12 @@ p {
    outline: 2px solid #3682c9;
 }
 
-.btn__footer {
+.btn {
    background-color: #3682c9;
    border: none;
    border-radius: 100px;
    display: flex;
-   padding: 10px 24px;
+   padding: 14px 24px;
    justify-content: center;
    align-items: center;
    gap: 8px;
@@ -276,14 +301,61 @@ p {
    align-self: stretch;
    font-size: 14px;
    color: #fff;
-   margin-left: 24px;
+}
+
+.btn:hover {
+   background-color: #f28f19;
    transition-duration: 0.4s;
 }
 
-.btn__footer:hover {
-   background-color: #f28f19;
+.btn:active {
+   background-color: #d77b32;
 }
 
-.btn__footer:active {
-   background-color: #d77b32;
+.btn-footer {
+   margin-left: 24px;
+}
+
+@media screen and (max-width: 768px) {
+   .container__footer {
+      margin: 42px 30px;
+   }
+   .container__input {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .wave-trans {
+      height: 2rem;
+   }
+
+   .container__footer {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .btn-footer {
+      margin: 20px 0;
+   }
+
+   .card-1__icons {
+      margin-top: 20px;
+   }
+
+   .container__footer-card.newsletter {
+      margin-top: 20px;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .container__nav {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .wave {
+      height: 2rem;
+   }
 }
